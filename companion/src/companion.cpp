@@ -95,11 +95,13 @@ bool dump()
       QStringList strlopts;
       // NEED TO BRACKET MUTUALLY EXCLUSIVE OPTS
       for (auto grp : buildopts) {
+        QStringList grpopts;
         for (auto opt : grp) {
-          strlopts.append(opt.name);
+          grpopts.append(opt.name);
         }
+        strlopts.append(grpopts.join("-")) ;
       }
-      QString stropts = strlopts.join("-");
+      QString stropts = strlopts.join("|");
 
       regfwout << firmware->getId().remove("edgetx-") << ";" << firmware->getShortName() << ";" << Boards::getManufacturer(firmware->getBoard())
                << ";" << stropts  << "\n";
