@@ -80,7 +80,7 @@ bool dump()
     return 1;
 
   QTextStream regbdout(&regbd);
-  regbdout << "id;idtxt;name;fourcc;fourcctext;fourccchar4;eepromsize;flashsize;extmodsize;suppintmods;dfltintmod;vmin;vmax;vwarn;txbat\n";
+  regbdout << "id;idtxt;name;fourcc;eepromsize;flashsize;extmodsize;suppintmods;dfltintmod;vmin;vmax;vwarn;txbat\n";
 
   QFile bdcap("bdcap.txt");
   if (!bdcap.open(QIODevice::WriteOnly | QIODevice::Text))
