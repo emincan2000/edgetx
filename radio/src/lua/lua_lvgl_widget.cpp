@@ -322,7 +322,7 @@ static bool pcallFuncWithString(lua_State *L, int funcRef, int nretval, const ch
 
 //-----------------------------------------------------------------------------
 
-LvglWidgetObjectBase *LvglWidgetObjectBase::checkLvgl(lua_State *L, int index, bool required)
+LvglWidgetObjectBase* LvglWidgetObjectBase::checkLvgl(lua_State *L, int index, bool required)
 {
   LvglWidgetObjectBase **p;
 
